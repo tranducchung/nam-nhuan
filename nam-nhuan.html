@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VHTM</title>
+</head>
+<h1>Có phải năm nhuận không ?</h1>
+<input type="number" id="nam" size="10"/>
+<button type="button" onclick="vao()" >Xem!</button>
+<hr>
+<p> Có phải không :<sanp id="kq"></sanp></p>
+<body>
+ <script>
+         function vao() {
+             let x = parseInt(document.getElementById("nam").value);
+             if (x%4!==0) {
+                 document.getElementById("kq").innerText = "Không"
+             }else  if (x%100!==0){document.getElementById("kq").innerText = "Có"
+             } else if (x%400!==0){document.getElementById("kq").innerText="Không"}
+             else {document.getElementById("kq").innerText = "Có"}
+         }
+ </script>
+</body>
+</html>
